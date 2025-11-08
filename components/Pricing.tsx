@@ -2,13 +2,17 @@
 import React from 'react';
 
 interface PricingProps {
+      onRegisterClick: () => void;
+  }
+
+  interface Plan {
       name: string;
-      description: string;CTAMENTE qué cambiar en cada archivo para hacerlo desde GitHub web? Así lo haces igual que hiciste con Header.tsx.
+      description: string;
       price: string;
-      period: string;───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      period: string;
       cta: string;
-      features: string[];───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-      highlight?: boolean;t+tab to cycle)
+      features: string[];
+      highlight?: boolean;
       annual?: string;
 }
 
