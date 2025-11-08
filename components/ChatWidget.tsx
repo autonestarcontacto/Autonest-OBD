@@ -41,7 +41,7 @@ const ChatWidget: React.FC = () => {
         try {
             const aiResponse = await getAiResponse(userInput);
             setMessages([...newMessages, { text: aiResponse, sender: 'ai' }]);
-        } catch (error) {
+        } catch (error: unknown) {
             setMessages([...newMessages, { text: 'Lo siento, hubo un error. Intenta de nuevo. 🔧', sender: 'ai' }]);
         } finally {
             setIsLoading(false);
