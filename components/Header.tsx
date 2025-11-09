@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
         { name: 'Testimonios', href: '#testimonios' },
     ];
 
-    const NavLinkItems = () => (
+    const NavLinkItems: React.FC = () => (
         <>
             {navLinks.map((link) => (
                 <a key={link.name} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 px-4 text-gray-600 hover:text-autonest-blue transition-colors duration-300 font-medium md:p-0">

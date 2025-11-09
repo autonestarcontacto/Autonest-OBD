@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             setCurrentImage((prev) => (prev + 1) % images.length);
         }, 3000);
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, []);
 
     return (
         <section className="bg-autonest-light pt-32 pb-20">
