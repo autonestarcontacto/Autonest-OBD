@@ -7,12 +7,12 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-        'images/OBDII-1.png',
-        'images/OBDII-2.png',
-        'images/OBDII-3.png',
-        'images/OBDII-4.png',
-        'images/OBDII-5.png',
-        'images/OBDII-6.png'
+        '/images/OBDII-1.png',
+        '/images/OBDII-2.png',
+        '/images/OBDII-3.png',
+        '/images/OBDII-4.png',
+        '/images/OBDII-5.png',
+        '/images/OBDII-6.png'
     ];
 
     useEffect(() => {

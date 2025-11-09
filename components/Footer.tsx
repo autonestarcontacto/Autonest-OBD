@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             <footer className="bg-autonest-dark text-white">
                 <div className="container mx-auto px-6 py-12">
                      <div className="text-center mb-8">
-                        <img src="images/Autonest.png" alt="Autonest Logo" className="h-12 w-12 rounded-full object-cover mx-auto mb-2 bg-white p-0.5 shadow-lg ring-1 ring-gray-600" />
+                        <img src="/images/Autonest.png" alt="Autonest Logo" className="h-12 w-12 rounded-full object-cover mx-auto mb-2 bg-white p-0.5 shadow-lg ring-1 ring-gray-600" />
                         <p className="text-2xl font-bold">AUTONEST</p>
                      </div>
                      <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
