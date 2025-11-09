@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const PhoneMockup: React.FC<{ platform: 'whatsapp' | 'telegram', message: string, platformColor: string, icon: React.ReactNode }> = ({ platform, message, platformColor, icon }) => {
@@ -7,7 +6,7 @@ const PhoneMockup: React.FC<{ platform: 'whatsapp' | 'telegram', message: string
             <div className="bg-white rounded-2xl overflow-hidden">
                 <div className={`flex items-center p-3 space-x-3`} style={{backgroundColor: platformColor}}>
                     <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                        <img src="https://i.imgur.com/8Qz4q4A.png" alt="Autonest Logo" className="h-7 w-auto" />
+                        <img src="/images/Autonest.png" alt="Autonest Logo" className="h-7 w-auto" />
                     </div>
                     <div>
                         <p className="font-bold text-white">Autonest</p>

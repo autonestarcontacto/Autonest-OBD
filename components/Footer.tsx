@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const PolicyModal: React.FC<{ title: string; content: React.ReactNode; onClose: () => void; }> = ({ title, content, onClose }) => (
@@ -49,7 +48,7 @@ const Footer: React.FC = () => {
             <footer className="bg-autonest-dark text-white">
                 <div className="container mx-auto px-6 py-12">
                      <div className="text-center mb-8">
-                        <img src="https://i.imgur.com/8Qz4q4A.png" alt="Autonest Logo" className="h-12 w-auto mx-auto mb-2" />
+                        <img src="/images/Autonest.png" alt="Autonest Logo" className="h-12 w-auto mx-auto mb-2" />
                         <p className="text-2xl font-bold">AUTONEST</p>
                      </div>
                      <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
