@@ -68,7 +68,7 @@ const ChatWidget: React.FC = () => {
                 </button>
             </div>
 
-            <div className={`fixed bottom-5 right-5 w-[calc(100%-40px)] max-w-sm h-[70vh] max-h-[500px] bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right z-40 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+            <div className={`fixed bottom-5 right-5 w-[calc(100%-40px)] max-w-sm h-[60vh] max-h-[400px] bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right z-40 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
                 <div className="bg-autonest-dark text-white p-4 rounded-t-xl flex justify-between items-center">
                     <h3 className="font-bold text-lg">Nesti</h3>
                     <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
