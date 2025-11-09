@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
     }, []);
 
     const navLinks = [
-        { name: 'Servicios', href: '#servicios' },
+        { name: 'Características', href: '#servicios' },
         { name: 'Planes', href: '#planes' },
         { name: 'Testimonios', href: '#testimonios' },
     ];

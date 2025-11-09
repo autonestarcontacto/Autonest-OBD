@@ -87,7 +87,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
             <div className="bg-gray-50 rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
                  <div className="p-6 border-b sticky top-0 bg-gray-50 z-10">
                     <div className="flex justify-between items-center">
-                        <h2 className="text-2xl font-bold text-autonest-dark">Registro en Autonest</h2>
+                        <h2 className="text-2xl font-bold text-autonest-dark">Formulario de Registro</h2>
                         <button onClick={onClose} disabled={isLoading} className="text-gray-400 hover:text-gray-600">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                         </button>
@@ -98,8 +98,8 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
                     {isSubmitted ? (
                         <div className="text-center py-12">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-autonest-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <h3 className="text-2xl font-bold mt-4 text-autonest-dark">¡Registro enviado!</h3>
-                            <p className="mt-2 text-gray-600">Revisa tu casillero de correo electrónico para continuar con la vinculación.</p>
+                            <h3 className="text-2xl font-bold mt-4 text-autonest-dark">¡Registro Exitoso!</h3>
+                            <p className="mt-2 text-gray-600">Hemos recibido tus datos correctamente. Revisa tu correo electrónico para completar el proceso de vinculación.</p>
                             <button onClick={onClose} className="mt-8 bg-autonest-blue text-white font-bold py-2 px-6 rounded-full hover:bg-cyan-600 transition-colors">Cerrar</button>
                         </div>
                     ) : (
@@ -107,7 +107,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
                             {error && <p className="text-red-500 bg-red-100 p-3 rounded-md mb-4">{error}</p>}
                             {step === 1 && (
                                 <div className="space-y-4">
-                                    <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Paso 1: Tus Datos</h3>
+                                    <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Paso 1: Información Personal</h3>
                                     <SelectField label="Tipo de usuario" name="userType" value={formData.userType} onChange={handleChange}>
                                         <option value={UserType.INDIVIDUAL}>Usuario Individual</option>
                                         <option value={UserType.COMPANY}>Empresa / Flota</option>
@@ -131,7 +131,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
                                         </SelectField>
                                     </div>
                                     <div className="flex justify-end pt-4">
-                                        <button type="button" onClick={handleNext} className="bg-autonest-blue text-white font-bold py-2 px-6 rounded-full hover:bg-cyan-600 transition-colors">Siguiente</button>
+                                        <button type="button" onClick={handleNext} className="bg-autonest-blue text-white font-bold py-2 px-6 rounded-full hover:bg-cyan-600 transition-colors">Continuar</button>
                                     </div>
                                 </div>
                             )}
@@ -139,7 +139,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
                             {step === 2 && (
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Paso 2: Datos del Vehículo</h3>
+                                        <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Paso 2: Información del Vehículo</h3>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             <SelectField label="Marca" name="vehicleBrand" value={formData.vehicleBrand} onChange={handleChange}>
                                                 {CAR_BRANDS.map(brand => <option key={brand} value={brand}>{brand}</option>)}
@@ -179,7 +179,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ onClose }) => {
                                     <div className="flex justify-between items-center pt-4">
                                         <button type="button" onClick={() => setStep(1)} className="text-gray-600 hover:text-black font-medium">Volver</button>
                                         <button type="submit" disabled={isLoading} className="bg-autonest-orange text-white font-bold py-2 px-6 rounded-full hover:bg-orange-500 transition-colors disabled:bg-gray-400">
-                                            {isLoading ? 'Enviando...' : 'Enviar Registro'}
+                                            {isLoading ? 'Enviando...' : 'Finalizar Registro'}
                                         </button>
                                     </div>
                                 </div>

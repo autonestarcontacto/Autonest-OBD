@@ -11,11 +11,11 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
                 <div className="text-center md:text-left fade-in-section">
                     <h1 className="text-4xl md:text-6xl font-bold text-autonest-dark leading-tight mb-4">
-                        Conecta con tu auto.
+                        Conectate con tu auto.
                         <span className="block text-autonest-blue">Conduce con inteligencia.</span>
                     </h1>
                     <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                        Autonest es tu copiloto personal. Anticipa fallas, gestiona mantenimientos y te mantiene seguro en el camino con nuestro asistente inteligente y dispositivo OBD-II.
+                        Autonest es tu copiloto personal que te permite anticipar fallas, gestionar mantenimientos y mantenerte seguro en el camino mediante nuestro asistente inteligente que se conecta al dispositivo OBD-II de tu vehículo.
                     </p>
                     <button
                         onClick={onRegisterClick}
@@ -24,10 +24,13 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
                     </button>
                 </div>
                 <div className="fade-in-section">
-                    <img 
-                        src="https://i.imgur.com/e37eY2e.png" 
-                        alt="Dispositivos OBD-II compatibles con Autonest" 
+                    <video 
+                        src="https://i.imgur.com/83u6sKj.mp4" 
                         className="w-full h-auto rounded-lg"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
                     />
                 </div>
             </div>

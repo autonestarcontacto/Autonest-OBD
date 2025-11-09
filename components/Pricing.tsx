@@ -34,9 +34,9 @@ const PlanCard: React.FC<{ plan: any, onRegisterClick: () => void }> = ({ plan, 
 const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
     const plans = [
         { name: 'Free', description: 'Lo esencial para empezar.', price: '$0', period: '/mes', cta: 'Regístrate ahora', features: ['100 peticiones/mes', 'Detección de fallas en tiempo real'] },
-        { name: 'Básico', description: 'Para el conductor diario.', price: '$14', period: '/mes', annual: 'o $134.40/año (20% off)', cta: 'Regístrate ahora', highlight: true, features: ['1,000 peticiones/mes', 'Todo lo del plan Gratis', 'Interacción por audio y texto', 'Mantenimiento predictivo', 'Sugerencias climáticas', 'Reportes mensuales'] },
-        { name: 'Premium', description: 'La experiencia completa.', price: '$20', period: '/mes', annual: 'o $192/año (20% off)', cta: 'Regístrate ahora', features: ['Peticiones ilimitadas', 'Todo lo del plan Básico', 'Interacción por fotos', 'Asistencia para agendar turnos', 'Gestión con el seguro', 'Reportes semanales y mensuales'] },
-        { name: 'Flotas', description: 'Soluciones a medida.', price: 'Custom', period: '', cta: 'Contáctanos', features: ['Optimiza costos y logística', 'Gestión centralizada', 'Soporte prioritario', 'Reportes personalizados'] }
+        { name: 'Básico', description: 'Para el conductor del día a día.', price: '$14', period: '/mes', annual: 'o $134.40/año (Ahorra 20%)', cta: 'Regístrate ahora', highlight: true, features: ['1,000 peticiones/mes', 'Todo lo del plan Gratis', 'Interacción por audio y texto', 'Mantenimiento predictivo', 'Sugerencias climáticas', 'Reportes mensuales'] },
+        { name: 'Premium', description: 'La experiencia completa para el cuidado de tu auto.', price: '$20', period: '/mes', annual: 'o $192/año (Ahorra 20%)', cta: 'Regístrate ahora', features: ['Peticiones ilimitadas', 'Todo lo del plan Básico', 'Interacción por fotos', 'Asistencia para agendar turnos', 'Gestión con el seguro', 'Reportes semanales y mensuales'] },
+        { name: 'Flotas', description: 'Soluciones personalizadas para la gestión de flotas.', price: 'Custom', period: '', cta: 'Contáctanos', features: ['Optimiza costos y logística', 'Gestión centralizada', 'Soporte prioritario', 'Reportes personalizados'] }
     ];
 
     return (

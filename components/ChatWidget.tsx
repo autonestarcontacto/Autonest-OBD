@@ -24,7 +24,7 @@ const ChatWidget: React.FC = () => {
         if(isOpen && messages.length === 0) {
             setIsLoading(true);
             setTimeout(() => {
-                 setMessages([{ sender: 'ai', text: '¡Hola! 🚗 Soy el asesor de Autonest. ¿En qué puedo ayudarte hoy? 💧' }]);
+                 setMessages([{ sender: 'ai', text: '¡Hola! 👋 Soy el asistente virtual de Autonest. ¿Tienes alguna pregunta sobre nuestros planes o servicios? 🚗' }]);
                  setIsLoading(false);
             }, 1000);
         }
@@ -70,7 +70,7 @@ const ChatWidget: React.FC = () => {
 
             <div className={`fixed bottom-5 right-5 w-[calc(100%-40px)] max-w-sm h-[70vh] max-h-[500px] bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right z-40 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
                 <div className="bg-autonest-dark text-white p-4 rounded-t-xl flex justify-between items-center">
-                    <h3 className="font-bold text-lg">Asesor Virtual Autonest</h3>
+                    <h3 className="font-bold text-lg">Asistente Virtual</h3>
                     <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -102,7 +102,7 @@ const ChatWidget: React.FC = () => {
                         value={userInput}
                         onChange={(e) => setUserInput(e.target.value)}
                         onKeyPress={handleKeyPress}
-                        placeholder="Escribe tu pregunta..."
+                        placeholder="Escribe tu consulta..."
                         className="w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-autonest-blue"
                         disabled={isLoading}
                     />

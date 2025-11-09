@@ -53,8 +53,8 @@ const Footer: React.FC = () => {
                         <p className="text-2xl font-bold">AUTONEST</p>
                      </div>
                      <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
-                        <p>Esta app es compatible con cualquier dispositivo OBD II. En caso de no contar con uno, contáctenos.</p>
-                        <p>Autonest no sustituye a un mecánico profesional pero ayuda en el diagnóstico previo y seguimiento de tu vehículo.</p>
+                        <p>Nuestra aplicación es compatible con cualquier dispositivo OBD-II. Si no tienes uno, contáctanos y te ayudaremos a conseguirlo.</p>
+                        <p>Autonest no reemplaza a un mecánico profesional, pero es una herramienta poderosa para el diagnóstico previo y el seguimiento continuo del estado de tu vehículo.</p>
                      </div>
                      <div className="flex justify-center items-center space-x-6 text-gray-300">
                         <button onClick={() => setModalContent({ title: 'Política de Privacidad', content: privacyPolicy })} className="hover:text-white transition-colors">Política de Privacidad</button>
