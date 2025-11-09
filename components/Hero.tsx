@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
                         Regístrate ahora
                     </button>
                 </div>
-                <div className="fade-in-section relative max-w-md mx-auto">
+                <div className="fade-in-section relative max-w-sm mx-auto">
                     <div className="relative w-full h-auto">
                         {images.map((img, index) => (
                             <img
