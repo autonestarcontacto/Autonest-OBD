@@ -6,7 +6,7 @@ const PhoneMockup: React.FC<{ platform: 'whatsapp' | 'telegram', message: string
         <div className="bg-gray-800 p-2 rounded-3xl shadow-2xl w-full max-w-sm mx-auto">
             <div className="bg-white rounded-2xl overflow-hidden">
                 <div className={`flex items-center p-3 space-x-3`} style={{backgroundColor: platformColor}}>
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                         <img src={autonestLogo} alt="Autonest Logo" className="h-7 w-7 rounded-full object-cover" />
                     </div>
                     <div>
