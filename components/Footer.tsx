@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                 <div className="container mx-auto px-6 py-12">
                      <div className="text-center mb-8">
                         <img src={autonestLogo} alt="Autonest Logo" className="h-12 w-12 rounded-full object-cover mx-auto mb-2 shadow-lg" />
-                        <p className="text-2xl font-bold">AUTONEST</p>
+                        <p className="text-2xl font-bold">AutoNest</p>
                      </div>
                      <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
                         <p>Nuestra aplicación es compatible con cualquier dispositivo OBD-II. Si no tienes uno, contáctanos y te ayudaremos a conseguirlo.</p>
