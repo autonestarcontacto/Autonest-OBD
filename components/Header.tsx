@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
         { name: 'Testimonios', href: '#testimonios' },
     ];
 
-    const NavLinkItems: React.FC = () => (
+    const NavLinkItems = () => (
         <>
             {navLinks.map((link) => (
                 <a key={link.name} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 px-4 text-gray-600 hover:text-autonest-blue transition-colors duration-300 font-medium md:p-0">
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-white/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#" className="flex items-center space-x-2">
-                    <img src="/Autonest.png" alt="Autonest Logo" className="h-10 w-auto" />
+                    <img src="https://i.imgur.com/8Qz4q4A.png" alt="Autonest Logo" className="h-10 w-auto" />
                     <span className="text-2xl font-bold text-autonest-dark tracking-tight">AUTONEST</span>
                 </a>
                 <nav className="hidden md:flex items-center space-x-8">

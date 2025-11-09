@@ -1,21 +1,12 @@
+
 import React from 'react';
 
-  interface PricingProps {
-      onRegisterClick: () => void;
-  }
+interface PricingProps {
+    onRegisterClick: () => void;
+}
 
-  interface Plan {
-      name: string;
-      description: string;
-      price: string;
-      period: string;
-      cta: string;
-      features: string[];
-      highlight?: boolean;
-      annual?: string;
-  }
 
-  const PlanCard: React.FC<{ plan: Plan, onRegisterClick: () => void }> = ({ plan, onRegisterClick }) => (
+const PlanCard: React.FC<{ plan: any, onRegisterClick: () => void }> = ({ plan, onRegisterClick }) => (
     <div className={`border rounded-xl p-8 flex flex-col h-full ${plan.highlight ? 'bg-autonest-dark text-white border-autonest-blue shadow-2xl transform md:scale-105' : 'bg-white hover:shadow-xl transition-shadow'}`}>
         <h3 className="text-2xl font-bold">{plan.name}</h3>
         <p className={`mt-2 ${plan.highlight ? 'text-gray-300' : 'text-gray-500'}`}>{plan.description}</p>
