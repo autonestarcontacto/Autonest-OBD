@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
                     </button>
                 </div>
                 <div className="fade-in-section relative">
-                    <div className="relative w-full h-auto" style={{ minHeight: '300px' }}>
+                    <div className="relative w-full h-auto">
                         {images.map((img, index) => (
                             <img
                                 key={img}
