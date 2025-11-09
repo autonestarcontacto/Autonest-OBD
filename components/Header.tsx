@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
             <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#" className="flex items-center space-x-2">
                     <img src={autonestLogo} alt="Autonest Logo" className="h-10 w-10 rounded-full object-cover shadow-md" />
-                    <span className="text-2xl font-bold text-autonest-dark tracking-tight">AUTONEST</span>
+                    <span className="text-2xl font-bold text-autonest-dark tracking-tight">AutoNest</span>
                 </a>
                 <nav className="hidden md:flex items-center space-x-8">
                     <NavLinkItems />
