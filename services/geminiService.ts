@@ -37,13 +37,21 @@ export const getAiResponse = async (userPrompt: string): Promise<string> => {
         
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
-            contents: userPrompt,
+            contents: { parts: [{ text: userPrompt }] },
             config: {
                 systemInstruction: systemInstruction,
             },
         });
 
-        return response.text;
+        const text = response.text;
+        
+        if (typeof text === 'string') {
+            return text;
+        }
+
+        console.error("Unexpected response type from Gemini API:", text);
+        return "Recibí una respuesta inesperada. Por favor, intenta de nuevo. 🔧";
+
     } catch (error) {
         console.error("Error calling Gemini API:", error);
         return "Oops, algo salió mal. Por favor, intenta de nuevo más tarde. 🔧";
