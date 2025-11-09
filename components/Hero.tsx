@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import obdImage1 from '/images/OBDII-1.png';
+import obdImage2 from '/images/OBDII-2.png';
+import obdImage3 from '/images/OBDII-3.png';
+import obdImage4 from '/images/OBDII-4.png';
+import obdImage5 from '/images/OBDII-5.png';
+import obdImage6 from '/images/OBDII-6.png';
 
 interface HeroProps {
     onRegisterClick: () => void;
@@ -7,12 +13,12 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-        '/images/OBDII-1.png',
-        '/images/OBDII-2.png',
-        '/images/OBDII-3.png',
-        '/images/OBDII-4.png',
-        '/images/OBDII-5.png',
-        '/images/OBDII-6.png'
+        obdImage1,
+        obdImage2,
+        obdImage3,
+        obdImage4,
+        obdImage5,
+        obdImage6
     ];
 
     useEffect(() => {
