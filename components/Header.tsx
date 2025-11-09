@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ onRegisterClick }) => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-white/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#" className="flex items-center space-x-2">
-                    <img src={autonestLogo} alt="Autonest Logo" className="h-10 w-10 rounded-full object-cover bg-white p-0.5 shadow-md" />
+                    <img src={autonestLogo} alt="Autonest Logo" className="h-10 w-10 rounded-full object-cover shadow-md" />
                     <span className="text-2xl font-bold text-autonest-dark tracking-tight">AUTONEST</span>
                 </a>
                 <nav className="hidden md:flex items-center space-x-8">
