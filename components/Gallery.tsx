@@ -6,8 +6,8 @@
           <div className="bg-gray-800 p-2 rounded-3xl shadow-2xl w-full max-w-sm mx-auto">
               <div className="bg-white rounded-2xl overflow-hidden">
                   <div className={`flex items-center p-3 space-x-3`} style={{backgroundColor: platformColor}}>
-                      <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
-                          <img src={autonestLogo} alt="Autonest Logo" className="h-10 w-10 rounded-full object-cover" />────────────────────────────────────────────────
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                          <img src={autonestLogo} alt="Autonest Logo" className="h-8 w-8 rounded-full object-cover" />
                       </div>
                       <div>
                           <p className="font-bold text-white">Autonest</p>
