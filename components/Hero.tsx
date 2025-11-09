@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
                 </div>
                 <div className="fade-in-section">
                     <img 
-                        src="https://i.imgur.com/e37eY2e.png" 
+                        src="/OBDII-1.png" 
                         alt="Dispositivos OBD-II compatibles con Autonest" 
                         className="w-full h-auto rounded-lg"
                     />
