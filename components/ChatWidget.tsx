@@ -24,7 +24,7 @@ const ChatWidget: React.FC = () => {
         if(isOpen && messages.length === 0) {
             setIsLoading(true);
             setTimeout(() => {
-                 setMessages([{ sender: 'ai', text: '¡Hola! 👋 Soy el asistente virtual de Autonest. ¿Tienes alguna pregunta sobre nuestros planes o servicios? 🚗' }]);
+                 setMessages([{ sender: 'ai', text: '¡Hola! 👋 Soy Nesti, el asistente virtual de Autonest. ¿Tienes alguna pregunta sobre nuestros planes o servicios? 🚗' }]);
                  setIsLoading(false);
             }, 1000);
         }
