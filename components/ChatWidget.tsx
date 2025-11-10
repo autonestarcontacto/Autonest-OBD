@@ -1,6 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getAiResponse } from '../services/geminiService';
+import { createChatSession, getAiResponse } from '../services/geminiService';
+import type { Chat } from '@google/genai';
+
 
 interface Message {
     text: string;
@@ -13,6 +15,7 @@ const ChatWidget: React.FC = () => {
     const [userInput, setUserInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const chatRef = useRef<Chat | null>(null);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -22,27 +25,30 @@ const ChatWidget: React.FC = () => {
     
     useEffect(() => {
         if(isOpen && messages.length === 0) {
+            // Initialize chat session when widget opens for the first time
+            chatRef.current = createChatSession();
             setIsLoading(true);
             setTimeout(() => {
                  setMessages([{ sender: 'ai', text: '¡Hola! 👋 Soy Nesti, el asistente virtual de Autonest. ¿Tienes alguna pregunta sobre nuestros planes o servicios? 🚗' }]);
                  setIsLoading(false);
             }, 1000);
         }
-    }, [isOpen, messages.length]);
+    }, [isOpen]);
 
     const handleSend = async () => {
-        if (userInput.trim() === '' || isLoading) return;
+        if (userInput.trim() === '' || isLoading || !chatRef.current) return;
 
         const newMessages: Message[] = [...messages, { text: userInput, sender: 'user' }];
         setMessages(newMessages);
+        const currentInput = userInput;
         setUserInput('');
         setIsLoading(true);
 
         try {
-            const aiResponse = await getAiResponse(userInput);
-            setMessages([...newMessages, { text: aiResponse, sender: 'ai' }]);
+            const aiResponse = await getAiResponse(chatRef.current, currentInput);
+            setMessages(prevMessages => [...prevMessages, { text: aiResponse, sender: 'ai' }]);
         } catch (error) {
-            setMessages([...newMessages, { text: 'Lo siento, hubo un error. Intenta de nuevo. 🔧', sender: 'ai' }]);
+            setMessages(prevMessages => [...prevMessages, { text: 'Lo siento, hubo un error. Intenta de nuevo. 🔧', sender: 'ai' }]);
         } finally {
             setIsLoading(false);
         }
@@ -68,9 +74,9 @@ const ChatWidget: React.FC = () => {
                 </button>
             </div>
 
-            <div className={`fixed bottom-5 right-5 w-[calc(100%-40px)] max-w-sm h-[60vh] max-h-[400px] bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right z-40 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+            <div className={`fixed bottom-5 right-5 w-[calc(100%-40px)] max-w-sm h-[70vh] max-h-[500px] bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right z-40 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
                 <div className="bg-autonest-dark text-white p-4 rounded-t-xl flex justify-between items-center">
-                    <h3 className="font-bold text-lg">Nesti</h3>
+                    <h3 className="font-bold text-lg">Asistente Virtual</h3>
                     <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
