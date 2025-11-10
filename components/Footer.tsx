@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
     const privacyPolicy = (
         <div className="prose">
             <p>Última actualización: Octubre 2025</p>
-            <p>Esta política describe cómo el Bot de atención de Ingeniería N8N maneja la información de los usuarios que interactúan a través de WhatsApp u otros canales conectados.</p>
+            <p>Esta política describe cómo el Bot de atención de Ingeniería maneja la información de los usuarios que interactúan a través de WhatsApp u otros canales conectados.</p>
             <h3>1. Información recopilada</h3>
             <p>El bot puede recibir y procesar información que los usuarios envían voluntariamente (por ejemplo, mensajes de texto o archivos) con el único fin de brindar soporte automatizado o responder consultas. No se recopilan datos personales sensibles ni se comparten con terceros.</p>
             <h3>2. Uso de la información</h3>
