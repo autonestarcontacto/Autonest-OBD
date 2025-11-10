@@ -42,6 +42,12 @@ PLANES Y PRECIOS:
 🏢 Plan Flotas:
    • Soluciones personalizadas para empresas
 
+PROGRAMA DE REFERIDOS:
+✅ ¡Recompensamos a los usuarios activos que invitan a nuevos miembros!
+   • **Plan 3x3:** Si tienes 3 meses de membresía básica pagada y consigues que 3 nuevos usuarios paguen 3 meses consecutivos, ganas 3 meses de membresía Premium.
+   • **Plan 6x6:** Funciona igual que el plan anterior, pero aplicando a usuarios con 6 meses consecutivos de membresía pagada.
+   • *Condición: Para aplicar, el usuario debe haber mantenido su membresía activa y sin interrupciones.*
+
 GARANTÍA Y COMPATIBILIDAD:
 ✅ Prueba GRATIS de 30 días del Plan Premium
 ✅ Compatible con cualquier dispositivo OBD-II
