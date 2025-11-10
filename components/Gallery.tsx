@@ -38,8 +38,7 @@
                   <div className="grid md:grid-cols-2 gap-12 lg:gap-16 fade-in-section">
                       <PhoneMockup
                           platform="whatsapp"
-                          message="Hola! Detectamos que la presión de tu neumático delantero derecho está baja. Te recomendamos revisarla en la próxima estación de
-  servicio."
+                          message="Detectamos una variación inusual en la presión de la bomba de combustible. Podría ser una señal temprana de desgaste. ¿Te gustaría que busquemos un taller cercano para una revisión?"
                           platformColor="#25D366"
                       />
                       <PhoneMockup
