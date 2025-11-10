@@ -55,24 +55,24 @@
 **Compatibilidad Específica por Marca (para modelos más antiguos):**
 - **Chevrolet:** Todos desde 2016. Celta desde 2007. Classic desde 2008.
 - **Volkswagen (VW):** Todos desde 2009.
-- **Fiat:** Desde 2008 en adelante.
-- **Ford:** Desde 2009 en adelante.
+- **Fiat:** Desde 2008 en adelante, todos sus modelos.
+- **Ford:** Desde 2009 en adelante, todos sus modelos.
 - **Renault:** Desde 2001 en adelante (excepto Clío 1.0).
 - **Honda:** Desde 2007 en adelante. Todos los modelos Fit son compatibles.
 - **Citroën:** Desde 2000 en adelante. Todos los modelos C3 son compatibles.
 - **Peugeot:** Desde 2001 en adelante (excepto motores 1.0).
-- **Toyota:** Desde 2010 en adelante.
-- **Audi:** Motores TDI de 1995 a 2012. Motores TFSI de 2005 a 2011.
+- **Toyota:** Desde 2010 en adelante, todos sus modelos.
+- **Audi:** Motores TDI de 1995 a 2012. Motores TFSI de 2005 a 2011, aplica para cualquier modelo dentro del rango de años.
 - **Alfa Romeo:** Motores JTDm de 2004 a 2009. Motores JTD de 2001 a 2009. Motores JTS desde 2004.
-- **BMW:** Motores Diésel de 2000 a 2008. Motores Nafta de 1999 a 2007.
-- **Hyundai:** Motores Diésel de 2003 a 2011. Motores Nafta de 2001 a 2011.
-- **Jeep:** Motores Diésel de 1999 a 2011. Motores Nafta de 1987 a 2008.
-- **Kia:** Motores Diésel de 2004 a 2012. Motores Nafta de 2000 a 2012.
-- **MINI:** Motores Diésel de 2000 a 2007. Motores Nafta de 2001 a 2007.
-- **Nissan:** Motores Diésel de 2000 a 2012. Motores Nafta de 2000 a 2013.
-- **SEAT:** Motores Diésel de 2001 a 2012. Motores Nafta de 2001 a 2007.
-- **Suzuki:** Motores Diésel de 2001 a 2011. Motores Nafta de 2000 a 2012.
-- **Subaru:** Motores Diésel desde 2000. Motores Nafta desde 2001.
+- **BMW:** Motores Diésel de 2000 a 2008. Motores Nafta de 1999 a 2007, aplica para cualquier modelo dentro del rango de años.
+- **Hyundai:** Motores Diésel de 2003 a 2011. Motores Nafta de 2001 a 2011, aplica para cualquier odelo dentro del rango de años.
+- **Jeep:** Motores Diésel de 1999 a 2011. Motores Nafta de 1987 a 2008, aplica para cualquier modelo dentro del rango de años.
+- **Kia:** Motores Diésel de 2004 a 2012. Motores Nafta de 2000 a 2012, aplica para cualquier modelo dentro del rango de años.
+- **MINI:** Motores Diésel de 2000 a 2007. Motores Nafta de 2001 a 2007, aplica para cualquier modelo dentro del rango de años.
+- **Nissan:** Motores Diésel de 2000 a 2012. Motores Nafta de 2000 a 2013, aplica para cualquier modelo dentro del rango de años.
+- **SEAT:** Motores Diésel de 2001 a 2012. Motores Nafta de 2001 a 2007, aplica para cualquier modelo dentro del rango de años.
+- **Suzuki:** Motores Diésel de 2001 a 2011. Motores Nafta de 2000 a 2012, aplica para cualquier modelo dentro del rango de años.
+- **Subaru:** Motores Diésel desde 2000. Motores Nafta desde 2001, aplica para cualquier modelo dentro del rango de años.
   ✅ Si no tienes dispositivo, te ayudamos a conseguirlo
   ⚠️ Autonest NO reemplaza a un mecánico profesional, es una herramienta de diagnóstico previo y seguimiento
 
