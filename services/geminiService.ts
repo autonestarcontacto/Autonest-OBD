@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Chat } from "@google/genai";
 
 const API_KEY = process.env.API_KEY;
 
@@ -90,30 +90,40 @@ INSTRUCCIONES PARA TI (NESTI):
 - Si preguntan fuera de Autonest, di amablemente que solo puedes hablar de nuestros servicios
 - Ayuda a elegir el plan correcto según las necesidades del usuario`;
 
-export const getAiResponse = async (userPrompt: string): Promise<string> => {
+
+let chat: Chat | null = null;
+
+export const createChatSession = (): Chat | null => {
+    if (!API_KEY) {
+        console.warn("API_KEY for Gemini is not set. Chat functionality will be disabled.");
+        return null;
+    }
+    const ai = new GoogleGenAI({ apiKey: API_KEY });
+    chat = ai.chats.create({
+        model: 'gemini-2.5-flash',
+        config: {
+            systemInstruction: systemInstruction,
+        },
+    });
+    return chat;
+}
+
+export const getAiResponse = async (chatInstance: Chat, userPrompt: string): Promise<string> => {
     if (!API_KEY) {
         return "Lo siento, el servicio de chat no está disponible en este momento. 💧";
     }
 
     try {
-        const ai = new GoogleGenAI({ apiKey: API_KEY });
-
         const chatSessionStarted = sessionStorage.getItem('autonest_chat_started');
-        let finalSystemInstruction = systemInstruction;
+        let finalUserPrompt = userPrompt;
 
         if (!chatSessionStarted) {
-            finalSystemInstruction = `Preséntate amigablemente como "Nesti 🤖" solo esta primera vez. Luego, responde la consulta del usuario. \n\n${systemInstruction}`;
+            finalUserPrompt = `Hola, preséntate amigablemente como "Nesti 🤖" y luego responde mi consulta: ${userPrompt}`;
             sessionStorage.setItem('autonest_chat_started', 'true');
         }
-        
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: { parts: [{ text: userPrompt }] },
-            config: {
-                systemInstruction: finalSystemInstruction,
-            },
-        });
 
+        const response = await chatInstance.sendMessage({ message: finalUserPrompt });
+        
         const text = response.text;
         
         if (typeof text === 'string') {
