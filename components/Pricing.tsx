@@ -1,11 +1,7 @@
-
 import React from 'react';
-
 interface PricingProps {
     onRegisterClick: () => void;
 }
-
-
 const PlanCard: React.FC<{ plan: any, onRegisterClick: () => void }> = ({ plan, onRegisterClick }) => (
     <div className={`border rounded-xl p-8 flex flex-col h-full ${plan.highlight ? 'bg-autonest-dark text-white border-autonest-blue shadow-2xl transform md:scale-105' : 'bg-white hover:shadow-xl transition-shadow'}`}>
         <h3 className="text-2xl font-bold">{plan.name}</h3>
@@ -23,14 +19,13 @@ const PlanCard: React.FC<{ plan: any, onRegisterClick: () => void }> = ({ plan, 
                 </li>
             ))}
         </ul>
-        <button 
-             onClick={plan.cta === "Contáctanos" ? () => window.location.href='mailto:autonest.ar.contacto@gmail.com' : onRegisterClick}
-             className={`w-full py-3 font-bold rounded-lg transition-colors duration-300 ${plan.highlight ? 'bg-autonest-orange text-white hover:bg-orange-400' : 'bg-autonest-blue/10 text-autonest-blue hover:bg-autonest-blue/20'}`}>
+        <button
+            onClick={plan.cta === "Contáctanos" ? () => window.location.href = 'mailto:soporte@autonest.com.ar' : onRegisterClick}
+            className={`w-full py-3 font-bold rounded-lg transition-colors duration-300 ${plan.highlight ? 'bg-autonest-orange text-white hover:bg-orange-400' : 'bg-autonest-blue/10 text-autonest-blue hover:bg-autonest-blue/20'}`}>
             {plan.cta}
         </button>
     </div>
 );
-
 const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
     const plans = [
         { name: 'Free', description: 'Lo esencial para empezar.', price: '$0', period: '/mes', cta: 'Regístrate ahora', features: ['100 peticiones/mes', 'Detección de fallas en tiempo real'] },
@@ -38,7 +33,6 @@ const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
         { name: 'Premium', description: 'La experiencia completa para el cuidado de tu auto.', price: '$20', period: '/mes', annual: 'o $192/año (Ahorra 20%)', cta: 'Regístrate ahora', features: ['Peticiones ilimitadas', 'Todo lo del plan Básico', 'Interacción por fotos', 'Asistencia para agendar turnos', 'Gestión con el seguro', 'Reportes semanales y mensuales'] },
         { name: 'Flotas', description: 'Soluciones personalizadas para la gestión de flotas.', price: 'Custom', period: '', cta: 'Contáctanos', features: ['Optimiza costos y logística', 'Gestión centralizada', 'Soporte prioritario', 'Reportes personalizados'] }
     ];
-
     return (
         <section id="planes" className="py-20 bg-autonest-light">
             <div className="container mx-auto px-6">
@@ -55,5 +49,4 @@ const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
         </section>
     );
 };
-
 export default Pricing;
