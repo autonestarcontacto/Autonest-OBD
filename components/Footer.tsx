@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import autonestLogo from '/images/Autonest.png';
-
 const PolicyModal: React.FC<{ title: string; content: React.ReactNode; onClose: () => void; }> = ({ title, content, onClose }) => (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={onClose}>
         <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="p-6 border-b flex justify-between items-center">
-                 <h2 className="text-2xl font-bold text-autonest-dark">{title}</h2>
+                <h2 className="text-2xl font-bold text-autonest-dark">{title}</h2>
                 <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -16,11 +15,8 @@ const PolicyModal: React.FC<{ title: string; content: React.ReactNode; onClose: 
         </div>
     </div>
 );
-
-
 const Footer: React.FC = () => {
     const [modalContent, setModalContent] = useState<{ title: string, content: React.ReactNode } | null>(null);
-
     const privacyPolicy = (
         <div className="prose">
             <p>Última actualización: Octubre 2025</p>
@@ -34,42 +30,39 @@ const Footer: React.FC = () => {
             <h3>4. Seguridad</h3>
             <p>Se aplican medidas técnicas razonables para proteger los datos transmitidos, evitando accesos no autorizados o usos indebidos.</p>
             <h3>5. Contacto</h3>
-            <p>Para consultas o solicitudes relacionadas con esta política, puede contactarnos en: <a href="mailto:autonest.ar.contacto@gmail.com" className="text-autonest-blue">autonest.ar.contacto@gmail.com</a></p>
+            <p>Para consultas o solicitudes relacionadas con esta política, puede contactarnos en: <a href="mailto:soporte@autonest.com.ar" className="text-autonest-blue">soporte@autonest.com.ar</a></p>
         </div>
     );
-
     const termsAndConditions = (
         <div className="prose">
             <p>Al utilizar los servicios de AutoNest, usted acepta cumplir con los términos establecidos en este documento. AutoNest se reserva el derecho de modificar estos términos en cualquier momento, notificando a los usuarios a través de los canales oficiales.</p>
         </div>
     );
-    
     return (
         <>
             <footer className="bg-autonest-dark text-white">
                 <div className="container mx-auto px-6 py-12">
-                     <div className="text-center mb-8">
+                    <div className="text-center mb-8">
                         <img src={autonestLogo} alt="Autonest Logo" className="h-12 w-12 rounded-full object-cover mx-auto mb-2 shadow-lg" />
                         <p className="text-2xl font-bold">AutoNest</p>
-                     </div>
-                     <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
+                    </div>
+                    <div className="text-center text-gray-400 text-sm max-w-3xl mx-auto mb-8 space-y-2">
                         <p>Nuestra aplicación es compatible con cualquier dispositivo OBD-II. Si no tienes uno, contáctanos y te ayudaremos a conseguirlo.</p>
                         <p>Autonest no reemplaza a un mecánico profesional, pero es una herramienta poderosa para el diagnóstico previo y el seguimiento continuo del estado de tu vehículo.</p>
-                     </div>
-                     <div className="flex justify-center items-center space-x-6 text-gray-300">
+                    </div>
+                    <div className="flex justify-center items-center space-x-6 text-gray-300">
                         <button onClick={() => setModalContent({ title: 'Política de Privacidad', content: privacyPolicy })} className="hover:text-white transition-colors">Política de Privacidad</button>
                         <span>|</span>
                         <button onClick={() => setModalContent({ title: 'Términos y Condiciones', content: termsAndConditions })} className="hover:text-white transition-colors">Términos y Condiciones</button>
                     </div>
-                     <div className="text-center text-gray-400 text-sm mt-8">
-                         <p>&copy; {new Date().getFullYear()} Autonest. Todos los derechos reservados.</p>
-                         <p>Contacto: <a href="mailto:autonest.ar.contacto@gmail.com" className="hover:text-autonest-blue">autonest.ar.contacto@gmail.com</a></p>
-                     </div>
+                    <div className="text-center text-gray-400 text-sm mt-8">
+                        <p>&copy; {new Date().getFullYear()} Autonest. Todos los derechos reservados.</p>
+                        <p>Contacto: <a href="mailto:soporte@autonest.com.ar" className="hover:text-autonest-blue">soporte@autonest.com.ar</a></p>
+                    </div>
                 </div>
             </footer>
             {modalContent && <PolicyModal title={modalContent.title} content={modalContent.content} onClose={() => setModalContent(null)} />}
         </>
     );
 };
-
 export default Footer;
